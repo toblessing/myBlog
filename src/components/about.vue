@@ -1,9 +1,85 @@
+<style>
+.avatar {
+  width: 150px;
+  height: 150px;
+  /* margin: 10px 300px; */
+}
+.item-center-h {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  margin: 10px auto;
+}
+.head-card {
+  padding: 0px;
+  border-radius: 20px;
+  z-index: 0;
+}
+</style>
+
+
 <template>
-    <p>about</p>
+  <div>
+    <div class="item-center-h">
+      <Card class="head-card">
+        <Avatar class="avatar" src="https://i.loli.net/2017/08/21/599a521472424.jpg"/>
+      </Card>
+    </div>
+    <div class="item-center-h">
+      <h1>宋家庚</h1>
+    </div>
+    <div class="item-center-h">
+      <h3>软件工程 - 厦门理工学院</h3>
+    </div>
+    <div class="item-center-h">
+      <h3>snailrend@163.com</h3>
+    </div>
+    <div class="item-center-h" style="marginTop:50px">
+        <meTimeLine :data="pointList">
+        </meTimeLine>
+
+    </div>
+    <ForceImg  class="item-center-h">
+
+    </ForceImg>
+  </div>
 </template>
 
 <script>
-    export default {
-        
+import meTimeLine from "./meTimeLine.vue"
+import ForceImg from "./ForceImg.vue"
+
+export default {
+    data:function(){
+        return{
+            pointList:[
+                {
+                    color:"purple",
+                    time:"2019年6月",
+                    content:"团队合作完成：自动排课系统"
+                },
+                {
+                    color:"blue",
+                    time:"2019年5月下旬",
+                    content:"独立完成：Android新闻应用"
+                },
+                {
+                    color:"blue",
+                    time:"2019年5月中旬",
+                    content:"独立完成：个人博客"
+                },
+                {
+                    color:"blue",
+                    time:"2019年1月",
+                    content:"团队合作完成：图片分享收集网站"
+                }
+            ]
+        }
+    },
+    components:{
+        meTimeLine,
+        ForceImg
     }
+
+};
 </script>

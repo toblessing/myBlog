@@ -28,7 +28,7 @@
 <template>
   <div class="layout">
     <Layout>
-      <Header :style="{position: 'fixed', width: '100%'}">
+      <Header :style="{position: 'fixed', width: '100%',zIndex:'999'}">
         <Menu mode="horizontal" theme="dark" active-name="1">
           <div class="layout-logo">
             <img src="favicon.ico">
@@ -53,19 +53,19 @@
       <Content
         :style="{margin: '88px 20px 0', minHeight: '800px',width:'1200px',marginLeft:'auto',marginRight:'auto'}"
       >
-        <Breadcrumb separator='->' :style="{margin: '20px 0'}">
+        <!-- <Breadcrumb separator='->' :style="{margin: '20px 0'}">
           <template v-for="item in BreadcrumbItemList">
             <BreadcrumbItem :key="item" :to="{name:item}" >{{ currentTitle }}</BreadcrumbItem>
           </template>
-        </Breadcrumb>
+        </Breadcrumb> -->
           <router-view/>
       </Content>
-      <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
+      <Footer class="layout-footer-center">2019-2019 &copy; song</Footer>
     </Layout>
   </div>
 </template>
 <script>
-import { platform } from "os";
+
 export default {
   data() {
     return {

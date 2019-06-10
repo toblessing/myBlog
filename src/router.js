@@ -2,8 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import home from './components/home'
 import catgory from './components/catgory'
+import catgoryItem from './components/catgoryItem'
 import timeLine from './components/timeLine'
 import about from './components/about'
+import find404 from './components/find404'
 
 Vue.use(Router)
 
@@ -30,6 +32,15 @@ var router =new Router({
             }
         },
         {
+            path: '/catgory/:item',
+            name: 'catgory',
+            props:true,
+            component: catgoryItem,
+            meta:{
+                title:'分类'
+            }
+        },
+        {
             path: '/timeLine',
             name: 'timeLine',
             component: timeLine,
@@ -44,6 +55,10 @@ var router =new Router({
             meta:{
                 title:'关于我'
             }
+        },
+        {
+            path: '/*',
+            component: find404
         }
         
     ]
