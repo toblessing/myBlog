@@ -9,9 +9,9 @@
 </style>
 <template>
   <Timeline>
-    <template v-for="point in data">
+    <template v-for="(point,index) in data">
       <template v-if="isCard">
-        <TimelineItem  v-bind:key="point" :color="point.color">
+        <TimelineItem  v-bind:key="index" :color="point.color">
           <Card style="top:-44px">
             <p slot="title">{{point.content}}</p>
             <p >{{point.time}}</p>
@@ -19,7 +19,7 @@
         </TimelineItem>
       </template>
       <template v-else>
-        <TimelineItem v-bind:key="point" :color="point.color">
+        <TimelineItem v-bind:key="index" :color="point.color">
           <p class="time">{{ point.time }}</p>
           <p class="content">{{ point.content }}</p>
         </TimelineItem>

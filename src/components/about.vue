@@ -31,6 +31,8 @@
     <div class="item-center-h">
       <h3>软件工程 - 厦门理工学院</h3>
     </div>
+          <Map lat=118.087873 lng=24.624047></Map>
+
     <div class="item-center-h">
       <h3>snailrend@163.com</h3>
     </div>
@@ -48,7 +50,7 @@
 <script>
 import meTimeLine from "./meTimeLine.vue"
 import ForceImg from "./ForceImg.vue"
-
+import Map from"./map"
 export default {
     data:function(){
         return{
@@ -78,7 +80,8 @@ export default {
     },
     components:{
         meTimeLine,
-        ForceImg
+        ForceImg,
+        Map
     }
 
 };
