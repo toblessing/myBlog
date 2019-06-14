@@ -14,8 +14,11 @@
 
 <script>
 function d3Exe() {
+  //设定宽度与高度
   var width = 960,
     height = 800;
+
+    //定义节点数据
   var nodes = [
     {
       index:0,
@@ -340,6 +343,7 @@ function d3Exe() {
     .attr("width", width)
     .attr("height", height);
 
+//定义布局参数
   var force = d3.layout
     .force()
     .gravity(0.1)
@@ -347,6 +351,7 @@ function d3Exe() {
     .charge(-500)
     .size([width, height]);
 
+//加载节点数据
   force
     .nodes(nodes)
     .links(links)

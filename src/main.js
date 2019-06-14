@@ -6,13 +6,14 @@ import './plugins/iview.js'
 import VueRouter from 'vue-router'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
-
+import element_ui from 'element-ui'
 //导入配置文件
 import router from './router'
 
 import './plugins/element.js'
 Vue.use(VueRouter)
 Vue.use(iView);
+Vue.use(element_ui)
 
 Vue.config.productionTip = false;
 
